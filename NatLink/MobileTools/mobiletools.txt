@@ -1,0 +1,22 @@
+
+	Documentation for MobileTools
+		Joel Gould
+
+------------------------------------------------------------------------------
+
+The following functions are direct wrappers for the speech coder
+compression decompression DLL (elemedia SX9600P).
+
+class SX96Codec():
+
+	encode(speechIn)
+		This function will take raw speech and compress (encode) it.  Pass
+		in a binary string which contains 120 16-bit words of speech.  This
+		function will return a binary string which contains 18 bytes of
+		compressed speech.
+
+	decode(dataIn)
+		This function will take compressed speech and decompress (decode)
+		it producing raw speech.  Pass in a binary string which contains 18
+		bytes of compressed speech.  This function will return either a 
+		binary string which contains the reconstructed speech.
